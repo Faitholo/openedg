@@ -1,0 +1,14 @@
+{% extends 'layouts/main.html' %}
+{% block title %}New Item Type{% endblock %}
+{% block content %}
+  <div class="form-wrapper">
+    <form method="post" class="form" action="/item_types/create">
+      <h3 class="form-heading">Create a new item type</h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{ form.new_item_type(class_ = 'form-control', autofocus = true) }}
+      </div>
+      <input type="submit" value="Create Item">
+    </form>
+  </div>
+{% endblock %}

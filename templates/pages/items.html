@@ -1,0 +1,21 @@
+{% extends 'layouts/main.html' %}
+{% block title %}OPENEDG | Items{% endblock %}
+{% block content %}
+{% for each in items %}
+<div><h4>{{ each.final_rubric }}</h4></div>
+<div>{{ each.question }}</div>
+<div>
+    <p>A. {{ each.A }}</p>
+    <p>B. {{ each.B }}</p>
+    <p>C. {{ each.C }}</p>
+    <p>D. {{ each.D }}</p>
+</div>
+<div>Answer: {{ each.answer }}</div>
+<div></div>
+<div>
+    <a href="/items/{{ each.xml_ref_main }}/view"><button>View</button></a>
+    <a href="/items/{{ each.xml_ref_main }}/edit"><button>Edit</button></a>
+    <a href="/items/{{ each.xml_ref_main }}/delete"><button>Delete</button></a>
+</div>
+{% endfor %}
+{% endblock %}

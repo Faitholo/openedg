@@ -1,0 +1,131 @@
+{% extends 'layouts/form.html' %}
+{% block title %}Update Item Item{% endblock %}
+{% block content %}
+  <div class="form-wrapper">
+    <form method="post" class="form" action="/items/{{ item.xml_ref_main }}/edit">
+      <h3 class="form-heading">Update an item</h3>
+      <div class="item">
+        <label for="objective_no">Objective no</label>
+        {{ form.objective_no(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="section">Section</label>
+        {{ form.section(class_ = 'form-control', placeholder='select', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="job">Job</label>
+        {{ form.job(class_ = 'form-control', placeholder='select', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="item_type">Item type</label>
+        {{ form.item_type(class_ = 'form-control', placeholder='select', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="item_number">Item number</label>
+        {{ form2.item_number(class_ = 'form-control', placeholder='select', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="question_number">Question number</label>
+        {{ form2.question_number(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="uploaded_by">Uploaded by</label>
+        {{ form.uploaded_by(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="can_do_skill">Can do skill</label>
+        <small></small>
+        {{ form.can_do_skill(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="reference">Reference</label>
+        {{ form.reference(class_ = 'form-control', placeholder='https://', autofocus = true) }}
+      </div>
+      
+      <div class="item">
+        <label for="grammar">Grammar</label>
+        {{ form.grammar(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+
+      <div class="item">
+        <label for="objective_no">Objective no</label>
+        {{ form.objective_no(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+
+      <div class="item">
+        <label for="script_text">Script/Text</label>
+        {{ form.script_text(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+
+      <div class="item">
+        <label for="rubric_part_1">Rubric part 1</label>
+        {{ form.rubric_part_1(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="rubric_part_2">Rubric part 2</label>
+        {{ form.rubric_part_2(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="final_rubric">Final Rubric</label>
+        {{ form2.final_rubric(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="notes">Notes</label>
+        {{ form.notes(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="congruence">Congruence</label>
+        {{ form.congruence(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="stem">Stem</label>
+        {{ form2.stem(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <div class="item">
+          <label for="options">A</label>
+            {{ form2.A(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+        <div class="item">
+          <label for="options">B</label>
+            {{ form2.B(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+        <div class="item">
+          <label for="options">C</label>
+            {{ form2.C(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+        <div class="item">
+          <label for="options">D</label>
+          {{ form2.D(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+      </div>
+      <div class="item">
+        <label for="answer">Answer</label>
+        {{ form2.answer(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <label for="scoring">Scoring</label>
+        {{ form2.scoring(class_ = 'form-control', placeholder='', autofocus = true) }}
+      </div>
+      <div class="item">
+        <div class="item">
+          <label for="rat_opt_a">Rat. opts A</label>
+            {{ form2.rat_opt_a(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+        <div class="item">
+          <label for="rat_opt_b">Rat. opts B</label>
+            {{ form2.rat_opt_b(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+        <div class="item">
+          <label for="rat_opt_c">Rat. opts C</label>
+            {{ form2.rat_opt_c(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+        <div class="item">
+          <label for="rat_opt_d">Rat. opts D</label>
+          {{ form2.rat_opt_d(class_ = 'form-control', placeholder='', autofocus = true) }}
+        </div>
+      </div>
+      <input type="submit" value="Update Item">
+    </form>
+  </div>
+{% endblock %}

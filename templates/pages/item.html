@@ -1,0 +1,50 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Item{% endblock %}
+{% block content %}
+<div>
+	{% if items[0].script_text == "" %}
+	<h4>Script/Text</h4>
+	<p>item.script_text</p>
+	{% endif %}
+</div>
+<div>
+<h3>{{ items[0].final_rubric }}</h3>
+<h4>Question</h4>
+{{ items[0].stem }}
+</div>
+<div>
+	<h4>Options</h4>
+    <p>A. {{ items[0].A }}</p>
+    <p>B. {{ items[0].B }}</p>
+    <p>C. {{ items[0].C }}</p>
+    <p>D. {{ items[0].D }}</p>
+</div>
+<div>Answer: {{ items[0].answer }}</div>
+<div>XML Ref Main: {{ items[0].xml_ref_main }}</div>
+<div>XML Ref Sub: {{ items[0].xml_ref_sub }}</div>
+<div>XML Objective: {{ items[0].xml_objective }}</div>
+<div>Section: {{ items[0].section }}</div>
+<div>Job: {{ items[0].job }}</div>
+<div>Item Type: {{ items[0].item_type }}</div>
+<div>Item number: {{ items[0].item_number }}</div>
+<div>Question number: {{ items[0].question_number }}</div>
+<div>Can do skill: {{ items[0].can_do_skill }}</div>
+<div>Uploaded by: {{ items[0].uploaded_by }}</div>
+<div>Grammar: {{ items[0].grammar}}</div>
+<div>Objective no.: {{ items[0].objective_no }}</div>
+<div>Congruence: {{ items[0].congruence }}</div>
+<div>Scoring: {{ items[0].scoring }}</div>
+<div>Reference: {{ items[0].reference }}</div>
+<div>Rubric part 1: {{ items[0].rubric_part_1 }}</div>
+<div>Rubric part 2: {{ items[0].rubric_part_2 }}</div>
+<div>Final Rubric: {{ items[0].final_rubric }}</div>
+<div>Rat. Opt. a: {{ items[0].rat_opt_a }}</div>
+<div>Rat. Opt. b: {{ items[0].rat_opt_b }}</div>
+<div>Rat. Opt. c: {{ items[0].rat_opt_c }}</div>
+<div>Rat. Opt. d: {{ items[0].rat_opt_d }}</div>
+<div>Notes: {{ items[0].notes }}</div>
+<div>
+    <a href="/items/{{ items[0].xml_ref_main }}/edit"><button>Edit</button></a>
+    <a href="/items/{{ items[0].xml_ref_main }}/delete"><button>Delete</button></a>
+</div>
+{% endblock %}

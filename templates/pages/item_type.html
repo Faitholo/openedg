@@ -1,0 +1,21 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Item{% endblock %}
+{% block content %}
+<ol class="items">
+	{% for item in items %}
+	<div>
+		<h4>{{ item.final_rubric }}</h4>
+	</div>
+	<li><p>{{ item.stem }}</p></li>
+		<p>A: {{ item.A }}</p>
+		<p>B: {{ item.B }}</p>
+		<p>C: {{ item.C }}</p>
+		<p>D: {{ item.D }}</p>
+	<div>
+		<a href="/items/{{ item.xml_ref_main }}/edit"><button>Edit</button></a>
+    	<a href="/items/{{ item.xml_ref_main }}/delete"><button>Delete</button></a>
+	</div>
+	{% endfor %}
+	
+</ol>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'layouts/main.html' %}
+{% block title %}New Job{% endblock %}
+{% block content %}
+  <div class="form-wrapper">
+    <form method="post" class="form" action="/jobs/create">
+      <h3 class="form-heading">Create a new job</h3>
+      <div class="form-group">
+        <label for="name">Name</label>
+        {{ form.new_job(class_ = 'form-control', autofocus = true) }}
+      </div>
+      <input type="submit" value="Create Job">
+    </form>
+  </div>
+{% endblock %}

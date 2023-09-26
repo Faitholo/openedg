@@ -1,0 +1,15 @@
+{% extends 'layouts/main.html' %}
+{% block title %} Items {% endblock %}
+{% block content %}
+<ul>
+{% for each in items %}
+	<li>
+        <div class="item">
+			<a href="/jobs/{{ each.id }}">{{ each.name }}</a>
+		</div>
+		<div><a href="/jobs/{{ each.id }}/delete"><button>Delete</button></a></div>
+	</li>
+	{% endfor %}
+</ul>
+<a href="/jobs/create"><button>New Job</button></a>
+{% endblock %}

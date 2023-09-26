@@ -1,0 +1,51 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}OPENEDG{% endblock %}</title>
+
+<!-- meta -->
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- /meta -->
+
+<!-- styles -->
+<link type="text/css" rel="stylesheet" href="/static/css/styles.css" />
+<!-- /styles -->
+</head>
+<body>
+  <nav>
+    <a class="navbar" href="{{ url_for('index') }}">Home</a>
+  </nav>
+
+  <!-- Wrap all page content here -->
+  <div id="wrap">
+
+    <!-- Begin page content -->
+    <main id="content" role="main" class="container">
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert">
+              <span><a class="close" onclick="this.parentElement.style.display='none';">&times;</a></span>
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      {% block content %}{% endblock %}
+      
+    </main>
+
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p>OPENEDG &copy; All Rights Reserved.</p>
+      {% block footer %}{% endblock %}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'layouts/main.html' %}
+{% block title %} Items {% endblock %}
+{% block content %}
+<ul>
+{% for each in items %}
+	<li>
+        <div class="item">
+			<a href="/item_types/{{ each.id }}">{{ each.name }}</a>
+		</div>
+	</li>
+	{% endfor %}
+</ul>
+<a href="/item_types/create"><button>New Item</button></a>
+{% endblock %}

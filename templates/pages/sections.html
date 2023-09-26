@@ -1,0 +1,16 @@
+{% extends 'layouts/main.html' %}
+{% block title %} Items {% endblock %}
+{% block content %}
+<ul>
+{% for each in items %}
+	<li>
+        <div class="item">
+			<a href="/sections/{{ each.id }}">{{ each.name }}</a>
+		</div>
+		<div><a href="/section/{{ each.id }}/delete"><button>Delete</button></a></div>
+	</li>
+	{% endfor %}
+</ul>
+
+<a href="/sections/create"><button>New Section</button></a>
+{% endblock %}
