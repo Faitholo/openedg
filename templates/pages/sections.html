@@ -5,12 +5,12 @@
 {% for each in items %}
 	<li>
         <div class="item">
-			<a href="openedg.onrender.com/sections/{{ each.id }}">{{ each.name }}</a>
+			<a href="/sections/{{ each.id }}">{{ each.name }}</a>
 		</div>
-		<div><a href="openedg.onrender.com/section/{{ each.id }}/delete"><button>Delete</button></a></div>
+		<div><a href="/section/{{ each.id }}/delete"><button>Delete</button></a></div>
 	</li>
 	{% endfor %}
 </ul>
 
-<a href="openedg.onrender.com/sections/create"><button>New Section</button></a>
+<a href="/sections/create"><button>New Section</button></a>
 {% endblock %}
