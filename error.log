@@ -676,3 +676,68 @@ TypeError: Parser must be a string or character stream, not datetime
 2023-09-25 16:07:42,206 INFO: errors [in /home/faith/openedg/question_items/app.py:583]
 2023-09-25 16:07:57,864 INFO: errors [in /home/faith/openedg/question_items/app.py:583]
 2023-09-25 16:08:19,003 INFO: errors [in /home/faith/openedg/question_items/app.py:583]
+2023-09-26 16:20:29,095 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:25:17,902 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:27:12,115 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:27:19,911 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:32:09,359 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:32:14,251 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:32:29,872 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:32:48,332 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:34:49,961 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:35:02,089 ERROR: Exception on /items [GET] [in /home/faith/project_fyyur/env/lib/python3.8/site-packages/flask/app.py:1449]
+Traceback (most recent call last):
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.UndefinedTable: relation "questions" does not exist
+LINE 2: FROM questions
+             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/flask/app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/flask/app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/flask/app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/faith/openedg/app.py", line 39, in all_items
+    results = Questions.query.all()
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2772, in all
+    return self._iter().all()
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 2907, in _iter
+    result = self.session.execute(
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1705, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 333, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1572, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1943, in _execute_context
+    self._handle_dbapi_exception(
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2124, in _handle_dbapi_exception
+    util.raise_(
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 208, in raise_
+    raise exception
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1900, in _execute_context
+    self.dialect.do_execute(
+  File "/home/faith/project_fyyur/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 736, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "questions" does not exist
+LINE 2: FROM questions
+             ^
+
+[SQL: SELECT questions.xml_ref_main AS questions_xml_ref_main, questions.xml_ref_sub AS questions_xml_ref_sub, questions.question_number AS questions_question_number, questions.item_number AS questions_item_number, questions.final_rubric AS questions_final_rubric, questions.stem AS questions_stem, questions."A" AS "questions_A", questions."B" AS "questions_B", questions."C" AS "questions_C", questions."D" AS "questions_D", questions.answer AS questions_answer, questions.scoring AS questions_scoring, questions.rat_opt_a AS questions_rat_opt_a, questions.rat_opt_b AS questions_rat_opt_b, questions.rat_opt_c AS questions_rat_opt_c, questions.rat_opt_d AS questions_rat_opt_d 
+FROM questions]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+2023-09-26 16:35:22,231 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:35:48,545 INFO: errors [in /home/faith/openedg/app.py:581]
+2023-09-26 16:42:22,717 INFO: errors [in /home/faith/openedg/app.py:581]

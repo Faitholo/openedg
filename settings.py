@@ -8,7 +8,7 @@ env_path = './env'
 load_dotenv(dotenv_path=env_path)
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY")
+app.secret_key = os.urandom(32)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('SQLALCHEMY_DATABASE_URI')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
